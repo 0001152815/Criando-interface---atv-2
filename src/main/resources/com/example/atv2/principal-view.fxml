@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.atv2.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label prefHeight="24.0" prefWidth="600.0" style="-fx-background-color: #c21b98;" text="   NISHE" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TextField layoutX="194.0" layoutY="13.0" prefHeight="25.0" prefWidth="181.0" text="Buscar:" />
+      <ImageView fitHeight="100.0" fitWidth="88.0" layoutX="38.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../download%20(1).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="77.0" layoutX="174.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../images%20(2).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="77.0" layoutX="482.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../download.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="77.0" layoutX="345.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../images.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="29.0" layoutY="193.0" text="Moda masculina" />
+      <Label layoutX="186.0" layoutY="192.0" text="Camisas" />
+      <Label layoutX="370.0" layoutY="193.0" text="Vestidos" />
+      <Label layoutX="501.0" layoutY="201.0" text="Moda Feminina" />
+      <Line endX="495.0" layoutX="105.0" layoutY="243.0" startX="-105.0" />
+   </children>
+</AnchorPane>
