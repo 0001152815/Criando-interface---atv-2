@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane fx:id="root" prefHeight="681.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atv2.Controllers.produtosController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="51.0" layoutY="24.0" prefHeight="143.0" prefWidth="321.0" spacing="10.0">
+         <children>
+            <Label text="Nome do produto:" />
+            <TextField />
+            <Label text="Código do produto:" />
+            <TextField />
+            <Label text="Valor do produto:" />
+            <TextField />
+            <Label text="Marca:" />
+            <TextField />
+            <Label text="Descrição:" />
+            <TextField />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="505.0" layoutY="24.0" prefHeight="143.0" prefWidth="321.0" spacing="10.0">
+         <children>
+            <Label text="Data de compra:" />
+            <TextField />
+            <Label text="Forncedor:" />
+            <TextField />
+            <Label text="Valor de venda:" />
+            <TextField />
+            <Label text="Categoria:" />
+            <TextField />
+            <Label text="Prateleira:" />
+            <TextField />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <TableView layoutX="116.0" layoutY="354.0" prefHeight="315.0" prefWidth="692.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Nome" />
+          <TableColumn prefWidth="75.0" text="Marca" />
+            <TableColumn prefWidth="75.0" text="Data de compra" />
+            <TableColumn prefWidth="75.0" text="Valor de venda" />
+            <TableColumn prefWidth="75.0" text="Categoria" />
+            <TableColumn prefWidth="75.0" text="Descrição" />
+            <TableColumn prefWidth="75.0" text="Fornecedor" />
+            <TableColumn prefWidth="75.0" text="Prateleira" />
+            <TableColumn prefWidth="75.0" text="Quantidade" />
+        </columns>
+      </TableView>
+      <MenuBar layoutY="-2.0" prefHeight="26.0" prefWidth="925.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

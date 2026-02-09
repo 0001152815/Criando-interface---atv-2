@@ -2,41 +2,77 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane fx:id="root" prefHeight="528.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atv2.Controllers.vendaController">
    <children>
-      <AnchorPane layoutX="392.0" prefHeight="400.0" prefWidth="208.0" style="-fx-background-color: #f0f4fa;">
+      <Pane layoutX="14.0" layoutY="66.0" prefHeight="119.0" prefWidth="359.0">
          <children>
-            <Label prefHeight="30.0" prefWidth="208.0" style="-fx-background-color: #c21b98;" text="    Meu carrinho:" textFill="WHITE">
+            <Label layoutX="14.0" layoutY="14.0" text="Informaçẽs da conta:">
                <font>
-                  <Font name="Berlin Sans FB" size="21.0" />
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="25.0" layoutY="51.0" text="Cpf:" />
+            <Label layoutX="191.0" layoutY="51.0" text="Data:" />
+            <Label layoutX="14.0" layoutY="88.0" text="Nome:" />
+            <TextField layoutX="50.0" layoutY="47.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField layoutX="50.0" layoutY="84.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField layoutX="224.0" layoutY="47.0" prefHeight="25.0" prefWidth="129.0" />
+         </children>
+      </Pane>
+      <Label prefHeight="41.0" prefWidth="931.0" style="-fx-background-color: #c21b98;" text="Tela de Vendas" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Label>
+      <Pane layoutX="21.0" layoutY="255.0" prefHeight="259.0" prefWidth="359.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Produto:">
+               <font>
+                  <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="55.0" text="Meus produtos:" />
-            <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="21.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../roupa1.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="76.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../roupa2.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="135.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../roupa3.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="15.0" layoutY="136.0" prefHeight="17.0" prefWidth="64.0" text="Valor total:" />
-            <Label layoutX="84.0" layoutY="136.0" prefHeight="17.0" prefWidth="100.0" text="xxxxxxxxxx" textFill="#c21b98" />
-            <Button layoutX="131.0" layoutY="200.0" mnemonicParsing="false" style="-fx-background-color: #c21b98;" text="Comprar" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="51.0" text="Código:" />
+            <Label layoutX="7.0" layoutY="171.0" text="Preço:" />
+            <Label layoutX="14.0" layoutY="101.0" text="Produto:" />
+            <TextField layoutX="60.0" layoutY="47.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField layoutX="63.0" layoutY="97.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField layoutX="40.0" layoutY="167.0" prefHeight="25.0" prefWidth="129.0" />
+            <Button layoutX="201.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: #c21b98;" text="Pesquisar" textFill="WHITE" />
+            <Label layoutX="175.0" layoutY="171.0" text="Qtd:" />
+            <TextField layoutX="202.0" layoutY="167.0" prefHeight="25.0" prefWidth="129.0" />
          </children>
-      </AnchorPane>
+      </Pane>
+      <Pane layoutX="413.0" layoutY="66.0" prefHeight="306.0" prefWidth="384.0">
+         <children>
+            <Label layoutX="1.0" layoutY="-2.0" text="Carrinho:">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <TableView layoutX="1.0" layoutY="33.0" prefHeight="273.0" prefWidth="382.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Código" />
+                  <TableColumn prefWidth="75.0" text="Produto" />
+                  <TableColumn prefWidth="75.0" text="Qtd" />
+                  <TableColumn prefWidth="75.0" text="Preço" />
+                  <TableColumn prefWidth="75.0" text="Subtotal" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button layoutX="731.0" layoutY="472.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #c21b98;" text="Cancelar" textFill="WHITE" />
+      <Button layoutX="616.0" layoutY="472.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #c21b98;" text="Pagamento" textFill="WHITE" />
+      <Label layoutX="444.0" layoutY="399.0" prefHeight="25.0" prefWidth="77.0" text="Valor total:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="521.0" layoutY="399.0" />
    </children>
 </AnchorPane>

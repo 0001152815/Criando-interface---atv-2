@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="401.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atv2.Controllers.relatorioController">
+   <children>
+      <TableView layoutX="3.0" layoutY="192.0" prefHeight="209.0" prefWidth="682.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Num. do item" />
+          <TableColumn prefWidth="75.0" text="Nome do item" />
+            <TableColumn prefWidth="75.0" text="Descrição do item" />
+            <TableColumn prefWidth="75.0" text="Preço" />
+            <TableColumn prefWidth="75.0" text="QTD." />
+            <TableColumn prefWidth="75.0" text="Valor" />
+            <TableColumn prefWidth="75.0" text="Tarifa de impostos" />
+            <TableColumn prefWidth="75.0" text="Imposto" />
+            <TableColumn prefWidth="75.0" text="Total" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Label layoutX="-1.0" prefHeight="31.0" prefWidth="688.0" style="-fx-background-color: #c21b98;" text=" Tela relatório de vendas" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="89.0" text="Vendedor:" />
+      <TextField layoutX="27.0" layoutY="106.0" />
+      <Label layoutX="188.0" layoutY="89.0" text="Data:" />
+      <TextField layoutX="188.0" layoutY="106.0" />
+   </children>
 </AnchorPane>
