@@ -2,42 +2,30 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="678.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atv2.Controllers.cadastroController">
+<AnchorPane fx:id="root" prefHeight="453.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atv2.controller.ClientesController">
    <children>
-      <Label layoutX="172.0" layoutY="208.0" text="Nome" />
-      <Label layoutX="427.0" layoutY="208.0" text="Sobrenome" />
-      <Label layoutX="172.0" layoutY="281.0" text="Cpf" />
-      <Label layoutX="172.0" layoutY="341.0" text="Telefone" />
-      <Label layoutX="172.0" layoutY="407.0" text="Email" />
-      <Label layoutX="172.0" layoutY="463.0" text="Senha" />
-      <TextField layoutX="427.0" layoutY="225.0" prefHeight="26.0" prefWidth="173.0" />
-      <TextField layoutX="172.0" layoutY="299.0" prefHeight="26.0" prefWidth="449.0" />
-      <TextField layoutX="172.0" layoutY="359.0" prefHeight="26.0" prefWidth="449.0" />
-      <TextField layoutX="172.0" layoutY="425.0" prefHeight="26.0" prefWidth="449.0" />
-      <TextField layoutX="172.0" layoutY="225.0" prefHeight="26.0" prefWidth="173.0" />
-      <TextField layoutX="172.0" layoutY="481.0" prefHeight="26.0" prefWidth="449.0" />
-      <Text layoutX="237.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie seu cadastro">
+      <Label layoutX="14.0" layoutY="106.0" text="Nome" />
+      <TextField fx:id="txtNome" layoutX="14.0" layoutY="123.0" prefHeight="26.0" prefWidth="173.0" />
+      <Button layoutX="174.0" layoutY="379.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #c21b98;" text="Cadastrar" textFill="WHITE" />
+      <Text layoutX="52.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Label layoutX="14.0" layoutY="149.0" text="Email" />
+      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="167.0" prefHeight="26.0" prefWidth="173.0" />
+      <Text layoutX="55.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Label layoutX="14.0" layoutY="193.0" text="Senha" />
+      <TextField fx:id="txtSenha" layoutX="14.0" layoutY="210.0" prefHeight="26.0" prefWidth="173.0" />
+      <Text layoutX="52.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Label layoutX="14.0" layoutY="236.0" text="Estado" />
+      <TextField fx:id="txtEstado" layoutX="14.0" layoutY="254.0" prefHeight="26.0" prefWidth="173.0" />
+      <Text layoutX="55.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Label layoutX="-1.0" prefHeight="57.0" prefWidth="432.0" style="-fx-background-color: #c21b98;" text=" Cadastro de clientes" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Bell MT" size="45.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
-      </Text>
-      <Button layoutX="168.0" layoutY="538.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #c21b98;" text="Cadastrar" textFill="WHITE" />
-      <TextArea layoutX="88.0" layoutY="92.0" prefHeight="76.0" prefWidth="631.0" text="Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos&#10; dados cadastrais. Os campos com * são de preenchimento obrigatório e essenciais para realizarmos&#10; o envio do seu futuro pedido.">
-         <font>
-            <Font name="Arial" size="12.0" />
-         </font>
-      </TextArea>
-      <Text layoutX="210.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
-      <Text layoutX="498.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
-      <Text layoutX="195.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
-      <Text layoutX="225.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
-      <Text layoutX="206.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
-      <Text layoutX="213.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      </Label>
    </children>
 </AnchorPane>

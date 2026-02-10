@@ -1,12 +1,8 @@
-package com.example.atv2.Controllers;
+package com.example.atv2.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
-
-import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
 public class principalController {
     @FXML
@@ -27,7 +23,7 @@ public class principalController {
     }
     @FXML
     public void abrirProdutos() {
-        carregarTela("CadProdutos-view.fxml");
+        carregarTela("Produtos-view.fxml");
     }
 
     private void carregarTela(String fxml) {

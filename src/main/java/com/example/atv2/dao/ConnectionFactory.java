@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/atv2"; // Endereço, porta e nome do banco.
+    private static final String URL = "jdbc:mysql://localhost:3306/atv02"; // Endereço, porta e nome do banco.
     private static final String USER = "root"; // Usuário do banco.
     private static final String PASSWORD = ""; // Senha do banco.
 

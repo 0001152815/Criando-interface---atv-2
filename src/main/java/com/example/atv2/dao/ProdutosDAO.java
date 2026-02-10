@@ -5,11 +5,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class produtosDAO {
+public class ProdutosDAO {
 
     private Connection connection;
 
-    public produtosDAO {
+    public ProdutosDAO() {
         this.connection = new ConnectionFactory().getConnection();
     }
 
@@ -36,7 +36,25 @@ public class produtosDAO {
             }
         }
         return produtos;
+
+    }
+    public void atualizar(Produtos produto) throws SQLException {
+        String sql = "UPDATE produto SET nome = ?, preco = ? WHERE id = ?";
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, produto.getNome());
+            stmt.setDouble(2, produto.getPreco());
+            stmt.setInt(3, produto.getId());
+            stmt.executeUpdate();
+        }
     }
 
+    public void excluir(int id) throws SQLException {
+        String sql = "DELETE FROM produto WHERE id = ?";
 
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }
+    }
 }

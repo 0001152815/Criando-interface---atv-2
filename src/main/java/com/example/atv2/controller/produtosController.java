@@ -1,32 +1,31 @@
-package com.example.atv2.Controllers;
+package com.example.atv2.controller;
 
-import com.example.atv2.dao.ProdutoDAO;
-import com.example.atv2.model.Produto;
+import com.example.atv2.dao.ProdutosDAO;
+import com.example.atv2.model.Produtos;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+
 
 public class produtosController {
     @FXML private TextField txtNome;
     @FXML private TextField txtPreco;
-    @FXML private TableView<Produto> tabelaProdutos ;
-    @FXML private TableColumn<Produto, Integer> colId;
-    @FXML private TableColumn<Produto, string> colNome;
-    @FXML private TableColumn<Produto, Double> colPreco;
+    @FXML private TableView<Produtos> tabelaProdutos ;
+    @FXML private TableColumn<Produtos, Integer> colId;
+    @FXML private TableColumn<Produtos, String> colNome;
+    @FXML private TableColumn<Produtos, Double> colPreco;
 
-    private ProdutoDAO dao = new ProdutoDAo();
+    private ProdutosDAO dao = new ProdutosDAO();
 
-    private Produto produtoSelecionado;
+    private Produtos produtoSelecionado;
 
     @FXML
     public void initialize() {
-        colId.setCellFactory(new PropertyValueFactory<>("id"));
-        colNome.setCellFactory(new PropertyValueFactory<>("nome"));
-        colPreco.setCellFactory(new PropertyValueFactory<>("preco"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        colPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         atualizarTabela();
     }
 
@@ -39,7 +38,7 @@ public class produtosController {
     public void salvarProduto() {
         try {
             if (produtoSelecionado == null) {
-                dao.salvar(new Produto(txtNome.getText(), Double.parseDouble((txtPreco.getText()))));
+                dao.salvar(new Produtos(txtNome.getText(), Double.parseDouble((txtPreco.getText()))));
             } else {
                 produtoSelecionado.setNome(txtNome.getText());
                 produtoSelecionado.setPreco(Double.parseDouble((txtPreco.getText())));
@@ -54,15 +53,15 @@ public class produtosController {
     public void excluirProduto() {
         if (produtoSelecionado != null) {
             try {
-                dao.deletar(produtoSelecionado.getId());
+                dao.excluir(produtoSelecionado.getId());
                 atualizarTabela();
                 limparCampos();
-            } catch (Exception e) { exibirAlerta("erro", getMessage()); }
+            } catch (Exception e) { exibirAlerta("erro", e.getMessage()); }
         }
     }
     @FXML
     public void selecionarItem() {
-        produtoSelecionado = tabelaProdutos.getSelectionModel().getSelectionModel().getSelectedItem();
+        produtoSelecionado = tabelaProdutos.getSelectionModel().getSelectedItem();
         if (produtoSelecionado != null) {
             txtNome.setText(produtoSelecionado.getNome());
             txtPreco.setText(String.valueOf(produtoSelecionado.getPreco()));

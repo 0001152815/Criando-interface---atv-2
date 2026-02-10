@@ -1,4 +1,4 @@
-package com.example.atv2.Controllers;
+package com.example.atv2.controller;
 
 public class relatorioController {
 }
