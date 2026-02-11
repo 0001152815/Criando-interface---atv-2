@@ -12,20 +12,30 @@ public class loginController {
     @FXML private TextField txtEmail;
     @FXML private TextField txtSenha;
 
+
+
     @FXML
     private void entrar() {
 
-        boolean autenticado = LoginDAO.autenticar(
+        LoginDAO dao = new LoginDAO();
+        boolean autenticado = dao.autenticar(
                 txtEmail.getText(),
                 txtSenha.getText()
         );
 
         if (autenticado) {
-            mostrarAlerta("Sucesso", "Login realizado com sucesso!");
+            mostrarAlerta("Sucesso - Login realizado com sucesso!");
         } else {
-            mostrarAlerta("Erro", "Email ou senha inválidos");
+            mostrarAlerta("Erro - Email ou senha inválidos");
         }
     }
+
+    @FXML
+    private void limparCampos() {
+        txtEmail.clear();
+        txtSenha.clear();
+    }
+
 
     private void mostrarAlerta(String mensagem) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
