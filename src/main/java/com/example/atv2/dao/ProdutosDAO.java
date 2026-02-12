@@ -14,7 +14,7 @@ public class ProdutosDAO {
     }
 
     public void salvar(Produtos produto) throws SQLException {
-        String sql = "INSERT INTO produto (nome, preco) VALUES (?,? )";
+        String sql = "INSERT INTO produtos (nome, preco) VALUES (?,? )";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1,produto.getNome());
             stmt.setDouble(2,produto.getPreco());
@@ -24,7 +24,7 @@ public class ProdutosDAO {
 
     public List<Produtos> listarTodos() throws SQLException {
         List<Produtos> produtos = new ArrayList<>();
-        String sql = "SELECT * FROM Produtos";
+        String sql = "SELECT * FROM produtos";
         try (PreparedStatement stmt = connection.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
@@ -39,7 +39,7 @@ public class ProdutosDAO {
 
     }
     public void atualizar(Produtos produto) throws SQLException {
-        String sql = "UPDATE produto SET nome = ?, preco = ? WHERE id = ?";
+        String sql = "UPDATE produtos SET nome = ?, preco = ? WHERE id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, produto.getNome());
@@ -50,7 +50,7 @@ public class ProdutosDAO {
     }
 
     public void excluir(int id) throws SQLException {
-        String sql = "DELETE FROM produto WHERE id = ?";
+        String sql = "DELETE FROM produtos WHERE id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);

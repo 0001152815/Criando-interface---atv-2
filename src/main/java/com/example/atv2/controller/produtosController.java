@@ -28,7 +28,6 @@ public class produtosController {
         colPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         atualizarTabela();
     }
-
     private void atualizarTabela() {
         try {
             tabelaProdutos.setItems(FXCollections.observableArrayList(dao.listarTodos()));
